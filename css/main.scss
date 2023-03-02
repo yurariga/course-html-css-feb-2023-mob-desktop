@@ -19,6 +19,7 @@ header {
         font-weight: bold;
         color: black;
         font-size: 1.2em;
+        margin-top: .5em;
 
         span {
             color: var(--primary-color);
@@ -45,7 +46,7 @@ nav.menu-btn {
 }
 
 nav {
-    position:fixed;
+    position: fixed;
     z-index: 999;
     width: 66%;
     right: 0;
@@ -146,6 +147,8 @@ section.features-section {
 ul.features-list {
     margin:0;
     padding-left: .1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 
     li {
         font-size: 1.1em;
@@ -232,4 +235,94 @@ input[type="submit"] {
 iframe {
     width: 100%;
     height: 300px;
+}
+
+@media only screen and (min-width: 780px) {
+    
+    .mobile-menu, .mobile-menu-exit {
+        display: none;
+    }
+
+    header .container {
+        display: grid;
+        grid-template-columns: 180px auto;
+
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        background:none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 0;
+
+        ul {
+            display: flex;
+
+            .primary-nav {
+                position: fixed;
+            }
+        }
+
+        
+
+        a {
+            color: black;
+        }
+
+        ul.primary-nav {
+            margin-top: 0;
+        }
+
+        li.current a {
+            font-weight: bold;
+        }
+
+        li.go-premium-cta a {
+            color: var(--primary-color);
+            border: 3px solid var(--primary-color);
+            font-weight: bold;
+            border-radius: 5em;
+            margin-top: -.2em;
+
+            &:hover {
+                background-color: var(--primary-color);
+                color: white;
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .container {
+        width: 1080px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 10em 4em;
+    }
+
+    .hero .container {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+
+        .left-col {
+            margin: 3em 3em 0 5em;
+
+            h1 {
+                font-size: 3em;
+                width: 90%;
+            }
+        }
+    }
+
+    .hero-img {
+        width: 90%;
+        margin-right: 8em;
+    }
 }
