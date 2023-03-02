@@ -35,8 +35,28 @@ header {
         place-content: space-between;
     }
 
-    .mobile-menu {
-        cursor: pointer;
+    // before changing type from img to button
+    // .mobile-menu {
+    //     cursor: pointer;
+    // }
+
+    svg {
+        margin-top: .3em;
+        width: 2.5em;
+        height: 1.7em;
+    }
+
+    button.mobile-menu-open {
+        background-color: white;
+        border-width: 0;
+        margin-right: .5em;
+
+    }
+
+    button.mobile-menu-exit {
+        background-color: #20272E;
+        border-width: 0;
+
     }
 
 }
@@ -127,6 +147,7 @@ section {
     .watch-video-cta {
         display:block;
         margin-top: 1em;
+        padding: .5em;
 
         img {
             margin-right: .5em;
@@ -239,7 +260,7 @@ iframe {
 
 @media only screen and (min-width: 780px) {
     
-    .mobile-menu, .mobile-menu-exit {
+    .mobile-menu-open, .mobile-menu-exit {
         display: none;
     }
 
@@ -325,4 +346,99 @@ iframe {
         width: 90%;
         margin-right: 8em;
     }
+
+    .hero-cta {
+        display: flex;
+    }
+
+    .primary-cta {
+        margin-right: 1em;
+    }
+
+    ul.features-list {
+        display: block;
+        margin-left: 5em;
+
+        li {
+            font-size: 1.4em;
+
+            &:before {
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+
+    }
+
+    .features-section {
+        position: relative;
+
+        img {
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 350px;
+            bottom: -2em;
+        }
+    }
+
+    .testimonials-section ul {
+        display: flex;
+
+        li {
+            margin: 0 1em;
+        }
+    }
+
+    .contact-section {
+        position: relative;
+
+        .container {
+            display: flex;
+        }
+
+        .contact-right {
+            position: absolute;
+            right: 0;
+            top:0;
+            width: 45%;
+            height: 100%;
+
+            iframe {
+                height: 100%;
+            }
+        }
+    }
+
 }
+
+@media only screen and (min-width: 1450px) {
+    .features-section {
+        &:before {
+            content: '';
+            position: absolute;
+            width: 10%;
+            height: 25em;
+            background-color: var(--primary-color);
+            left: 0;
+            top: -4em;
+
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 20em;
+            background: url('../images/dots.svg') no-repeat;
+            left: 4.5em;
+            top: 1em;
+        }
+    }
+}
+
+.gm-style:focus {
+     outline:none!important;
+}
+

@@ -30,8 +30,19 @@ header .container {
   display: flex;
   place-content: space-between;
 }
-header .mobile-menu {
-  cursor: pointer;
+header svg {
+  margin-top: 0.3em;
+  width: 2.5em;
+  height: 1.7em;
+}
+header button.mobile-menu-open {
+  background-color: white;
+  border-width: 0;
+  margin-right: 0.5em;
+}
+header button.mobile-menu-exit {
+  background-color: #20272E;
+  border-width: 0;
 }
 
 nav.menu-btn {
@@ -110,6 +121,7 @@ section {
 .left-col .watch-video-cta {
   display: block;
   margin-top: 1em;
+  padding: 0.5em;
 }
 .left-col .watch-video-cta img {
   margin-right: 0.5em;
@@ -213,7 +225,7 @@ iframe {
 }
 
 @media only screen and (min-width: 780px) {
-  .mobile-menu, .mobile-menu-exit {
+  .mobile-menu-open, .mobile-menu-exit {
     display: none;
   }
   header .container {
@@ -280,4 +292,76 @@ iframe {
     width: 90%;
     margin-right: 8em;
   }
+  .hero-cta {
+    display: flex;
+  }
+  .primary-cta {
+    margin-right: 1em;
+  }
+  ul.features-list {
+    display: block;
+    margin-left: 5em;
+  }
+  ul.features-list li {
+    font-size: 1.4em;
+  }
+  ul.features-list li:before {
+    width: 30px;
+    height: 30px;
+  }
+  .features-section {
+    position: relative;
+  }
+  .features-section img {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 350px;
+    bottom: -2em;
+  }
+  .testimonials-section ul {
+    display: flex;
+  }
+  .testimonials-section ul li {
+    margin: 0 1em;
+  }
+  .contact-section {
+    position: relative;
+  }
+  .contact-section .container {
+    display: flex;
+  }
+  .contact-section .contact-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+  }
+  .contact-section .contact-right iframe {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .features-section:before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 25em;
+    background-color: var(--primary-color);
+    left: 0;
+    top: -4em;
+  }
+  .features-section:after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 20em;
+    background: url("../images/dots.svg") no-repeat;
+    left: 4.5em;
+    top: 1em;
+  }
+}
+.gm-style:focus {
+  outline: none !important;
 }/*# sourceMappingURL=main.css.map */
